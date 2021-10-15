@@ -221,7 +221,7 @@ Argument TIME time at which the heartbeat was computed."
       (data . ((language . ,(if (activity-watch--s-blank (symbol-name major-mode)) "unknown" major-mode))
                (project . ,project-name)
                (file . ,(if (activity-watch--s-blank file-name) "unknown" file-name))
-               (branch . ,(or git-branch "none")))))))
+               (branch . ,(or git-branch "unknown")))))))
 
 (defun activity-watch--send-heartbeat (heartbeat)
   "Send HEARTBEAT to activity watch server."
